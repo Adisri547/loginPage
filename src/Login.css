@@ -1,0 +1,182 @@
+/* Add a full-screen grey overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(104, 98, 98, 0.5); /* Semi-transparent grey */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Left section - Login form */
+.login-box {
+  flex: 1;
+  background: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  color: #6b7280;
+  margin: 10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+/* Remember me and Forgot password */
+/* Ensure the checkbox and text are in one line */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.options div {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add spacing between checkbox and text */
+}
+
+.options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.options label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.options a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+
+/* Buttons */
+.sign-in {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.google-sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-sign-in img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+/* Signup */
+.signup {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.signup a {
+  color: #1d4ed8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Right section - Image & Testimonial */
+.image-box {
+  flex: 1;
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.testimonial h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.testimonial span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .image-box {
+    display: none;
+  }
+}
